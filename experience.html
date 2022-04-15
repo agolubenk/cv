@@ -265,12 +265,12 @@
         <div class="col-md-10">
             <ul class="cbp_tmtimeline">
                 <li>
-                    <time class="cbp_tmtime" datetime="2017-11-04T18:30"><span class="hidden text-primary">NOW</span> <span class="large text-warning"><small>01.2022 - </small><small id="today" class="text-warning"></small></span></time>
+                    <time class="cbp_tmtime" datetime="2017-11-04T18:30"><span class="hidden text-danger" id="todays"></span> <span class="large text-warning"><small>01.2022 - </small><small id="today" class="text-warning"></small></span></time>
                     <div class="cbp_tmicon bg-warning"><i class="bi bi-activity"></i></div>
                     <div class="cbp_tmlabel empty">
-                        <h4><a href="javascript:void(0);" class="text-dark" style="text-decoration: none;">IT and Digital</a></h4>
-                       <h6 class="text-secondary pb-2" style="text-decoration: none;">Специалист по подбору персонала</h6>
-                        <p>Сорсинг IT специалистов с использованием различных каналов поиска, скрининг резюме, установление контакта с кандидатами, проведение интервью, оценка компетенций, навыков, мотивирующей составляющей. Адаптация принятых на работу специалистов. Работа с базой.<hr class="bg-dark">
+                        <h4><a href="javascript:void(0);" class="text-dark" style="text-decoration: none;">М21 Хант</a></h4>
+                       <h6 class="text-secondary pb-2" style="text-decoration: none;">IT-recruiter</h6>
+                        <p>Сорсинг IT специалистов с использованием различных каналов поиска, скрининг резюме, проведение первичного интервью, оценка soft skills, мотивации и интересов кандидатов. Взаимодействие с заказчиком. Работа с базой ClickUp.<hr class="bg-dark">
                         <span class="badge bg-primary text-white"><i class="bi bi-hash fa-lg"></i>подбор персонала</span>&nbsp;<span class="badge bg-danger text-white"><i class="bi bi-hash fa-lg"></i>поиск кандидатов</span>&nbsp;<span class="badge bg-success text-white"><i class="bi bi-hash fa-lg"></i>скрининг</span>&nbsp;<span class="badge bg-warning text-white"><i class="bi bi-hash fa-lg"></i>интервьюирование</span>&nbsp;<span class="badge bg-info text-white"><i class="bi bi-hash fa-lg"></i>выявление компетенций</span></p> </div>
                 </li>
                 <li>
@@ -279,7 +279,7 @@
                     <div class="cbp_tmlabel">
                         <h4><a href="javascript:void(0);" class="text-dark" style="text-decoration: none;">IT and Digital</a></h4>
                        <h6 class="text-secondary pb-2" style="text-decoration: none;">Специалист по подбору персонала</h6>
-                        <p>Сорсинг IT специалистов с использованием различных каналов поиска, скрининг резюме, установление контакта с кандидатами, проведение интервью, оценка компетенций, навыков, мотивирующей составляющей. Адаптация принятых на работу специалистов. Работа с базой.<hr class="bg-dark">
+                        <p>Сорсинг IT специалистов с использованием различных каналов поиска, скрининг резюме, установление контакта с кандидатами, проведение интервью, оценка компетенций, навыков, мотивирующей составляющей. Адаптация принятых на работу специалистов. Работа с базой Trello.<hr class="bg-dark">
                         <span class="badge bg-primary"><i class="bi bi-hash fa-lg"></i>подбор персонала</span>&nbsp;<span class="badge bg-danger"><i class="bi bi-hash fa-lg"></i>поиск кандидатов</span>&nbsp;<span class="badge bg-success"><i class="bi bi-hash fa-lg"></i>скрининг</span>&nbsp;<span class="badge bg-warning"><i class="bi bi-hash fa-lg"></i>интервьюирование</span>&nbsp;<span class="badge bg-info"><i class="bi bi-hash fa-lg"></i>выявление компетенций</span></p>
                     </div>
                 </li>
@@ -289,7 +289,7 @@
                     <div class="cbp_tmlabel">
                        <h4><a href="javascript:void(0);" class="text-dark" style="text-decoration: none;">Автодом групп</a></h4>
                        <h6 class="text-secondary pb-2" style="text-decoration: none;">Специалист по подбору персонала</h6>
-                        <p>Скрининг резюме, поиск и подбор кандидатов, проведение телефонных интервью, подведение к очному собеседованию, работа с базой, массовый подбор.<hr class="bg-dark">
+                        <p>Скрининг резюме, поиск и подбор кандидатов, проведение телефонных интервью, подведение к очному собеседованию, работа с базой hh.ru, массовый подбор.<hr class="bg-dark">
                         <span class="badge bg-primary"><i class="bi bi-hash fa-lg"></i>подбор персонала</span>&nbsp;<span class="badge bg-danger"><i class="bi bi-hash fa-lg"></i>поиск кандидатов</span>&nbsp;<span class="badge bg-success"><i class="bi bi-hash fa-lg"></i>скрининг</span>&nbsp;<span class="badge bg-warning"><i class="bi bi-hash fa-lg"></i>интервьюирование</span>&nbsp;<span class="badge bg-info"><i class="bi bi-hash fa-lg"></i>коммуникабельность</span></p>
                 </li>
             </ul>  
@@ -318,14 +318,19 @@
 temp_date = new Date();
 day = temp_date.getDate();
 month = temp_date.getMonth() + 1;
-year = temp_date.getYear()-100;
+year = temp_date.getYear()-100+2000;
 if (day < 10) {
 day = "0" + day;
 }
+document.getElementById('todays').innerHTML =  month + "М";
 if (month <10) {
 month = "0" + month;
 }
-document.getElementById('today').innerHTML = day + "." + month + "." + year;
+document.getElementById('today').innerHTML =  month + "." + year;
+
+    </script>
+    <script>
+
     </script>
   </body>
 </html>
